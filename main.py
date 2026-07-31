@@ -26,9 +26,3 @@ async def update_student(student_id: int, student_name: str):
 async def delete_student(student_id: int):
     del student_list[student_id]
     return {"message": f"Student {student_id} deleted successfully"}
-
-
-@app.get("/student/{student_list}")
-async def get_all_student(student_list: list):
-    student_list = ["Enzo", "JR", "Nyx", "Taz"]
-    return {"message": f"All students: {student_list}"}
